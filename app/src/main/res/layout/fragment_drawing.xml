@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <include
+            android:id="@+id/brushLayout"
+            layout="@layout/layout_brush"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/colorLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/colorLayout"
+            layout="@layout/ic_brush_color_layout"
+            android:layout_width="0dp"
+            app:layout_constraintStart_toEndOf="@id/brushLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/brushSettingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:backgroundTint="@color/dark_black"
+            android:background="@drawable/ic_rectangular_border"
+            app:layout_constraintBottom_toTopOf="@id/rasmView"
+             app:layout_constraintTop_toBottomOf="@id/brushLayout">
+
+            <TextView
+                android:id="@+id/sizePercent"
+                android:text="75"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="@id/sizeSeekBar"
+                app:layout_constraintEnd_toEndOf="@id/sizeSeekBar"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/sizePlus"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_add"
+                android:layout_marginStart="5dp"
+                app:layout_constraintTop_toTopOf="@id/sizeSeekBar"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageView
+                android:id="@+id/sizeMinus"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_sub"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintTop_toTopOf="@id/sizeSeekBar"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <SeekBar
+                android:id="@+id/sizeSeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:max="100"
+                android:progress="70"
+                app:layout_constraintTop_toBottomOf="@id/sizePercent"
+                app:layout_constraintEnd_toStartOf="@id/sizeMinus"
+                app:layout_constraintStart_toEndOf="@id/sizePlus" />
+
+            <TextView
+                android:id="@+id/opacityPercent"
+                android:text="75"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/sizeSeekBar"
+                app:layout_constraintStart_toStartOf="@id/opacitySeekBar"
+                app:layout_constraintEnd_toEndOf="@id/opacitySeekBar"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/opacityPlus"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_add"
+                android:layout_marginStart="5dp"
+                app:layout_constraintTop_toTopOf="@id/opacitySeekBar"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageView
+                android:id="@+id/opacityMinus"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_sub"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintTop_toTopOf="@id/opacitySeekBar"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+            <SeekBar
+                android:id="@+id/opacitySeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sizeSeekBar"
+                android:layout_margin="16dp"
+                android:max="100"
+                android:progress="75"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintEnd_toStartOf="@id/opacityMinus"
+                app:layout_constraintStart_toEndOf="@id/opacityPlus"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/opacityPercent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.raed.rasmview.RasmView
+                android:id="@+id/rasmView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="60dp"
+                app:layout_constraintBottom_toTopOf="@id/bottomLayout"
+                app:layout_constraintTop_toBottomOf="@id/brushSettingLayout" />
+
+
+        <ImageView
+            android:id="@+id/expandView"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_expand"
+            android:backgroundTint="@color/light_black"
+            android:scaleType="fitXY"
+            android:padding="7dp"
+            android:contentDescription="@string/show_all"
+            android:background="@drawable/rounded_color_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="-18dp"
+            android:layout_marginEnd="25dp"
+            app:layout_constraintBottom_toTopOf="@id/bottomLayout"
+            app:tint="@color/white" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/eraseIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_eraser"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/undoIcon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/undoIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_undo"
+                app:tint="@color/white"
+                app:layout_constraintEnd_toStartOf="@id/redoIcon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/eraseIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/redoIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_redo"
+                app:tint="@color/white"
+                app:layout_constraintEnd_toStartOf="@id/paintIcon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/undoIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/paintIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="5dp"
+                app:tint="@color/white"
+                android:src="@drawable/ic_coloring"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/clearIcon"
+                app:layout_constraintStart_toEndOf="@id/redoIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/clearIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="5dp"
+                app:tint="@color/white"
+                android:src="@drawable/ic_clear"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/paintIcon"
+                app:layout_constraintStart_toEndOf="@id/saveIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/saveIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="5dp"
+                app:tint="@color/white"
+                android:src="@drawable/ic_save"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/sendIcon"
+                app:layout_constraintStart_toEndOf="@id/clearIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/sendIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_send"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/saveIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

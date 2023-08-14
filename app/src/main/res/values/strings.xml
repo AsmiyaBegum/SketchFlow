@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">SketchFlow</string>
+    <string name="title_home">Home</string>
+    <string name="title_colouring">Colouring</string>
+    <string name="title_live_drawing">Live drawing</string>
+    <string name="title_challenges">Challenges</string>
+    <string name="drawing">Drawing</string>
+    <string name="photo_drawing">Photo Drawing</string>
+    <string name="post_images">Post Images</string>
+    <string name="drafts">Drafts</string>
+    <string name="forward">forward</string>
+    <string name="back">Back</string>
+    <string name="show_all">show_all</string>
+    <string name="hide_all">hide_all</string>
+    <string name="drafts_saved">Drafts Saved Successfully</string>
+    <string name="drafts_updated">Drafts updated Successfully</string>
+    <string name="save_alert">You are presented with a choice: either save the image or easily share it.</string>
+    <string name="alert_positive">Save Image</string>
+    <string name="alert_negative">Share Image</string>
+</resources>

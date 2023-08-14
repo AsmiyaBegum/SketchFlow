@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/color1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:padding="4dp"
+            android:background="@drawable/rounded_color_bg"
+            app:tint="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/color5"
+            app:layout_constraintEnd_toStartOf="@id/color2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/color2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:padding="4dp"
+            android:background="@drawable/rounded_color_bg"
+            app:layout_constraintEnd_toStartOf="@id/color3"
+            app:layout_constraintStart_toEndOf="@id/color1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/color3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:padding="4dp"
+            android:background="@drawable/rounded_color_bg"
+            app:layout_constraintEnd_toStartOf="@id/color4"
+            app:layout_constraintStart_toEndOf="@id/color2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/color4"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:padding="4dp"
+            android:background="@drawable/rounded_color_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/color3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/color5"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:padding="4dp"
+            android:background="@drawable/rounded_color_bg"
+            app:layout_constraintEnd_toStartOf="@id/color6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/color1" />
+
+        <ImageView
+            android:id="@+id/color6"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:padding="4dp"
+            android:background="@drawable/rounded_color_bg"
+            app:layout_constraintEnd_toStartOf="@id/color7"
+            app:layout_constraintStart_toEndOf="@id/color5"
+            app:layout_constraintTop_toBottomOf="@+id/color1" />
+
+        <ImageView
+            android:id="@+id/color7"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:padding="4dp"
+            android:background="@drawable/rounded_color_bg"
+            app:layout_constraintEnd_toStartOf="@id/color8"
+            app:layout_constraintStart_toEndOf="@id/color6"
+            app:layout_constraintTop_toBottomOf="@id/color1" />
+
+        <ImageView
+            android:id="@+id/color8"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:padding="4dp"
+            android:background="@drawable/rounded_color_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/color7"
+            app:layout_constraintTop_toBottomOf="@id/color1" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

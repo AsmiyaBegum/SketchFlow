@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_colouring"
+        android:icon="@drawable/ic_coloring"
+        android:title="@string/title_colouring" />
+
+    <item
+        android:id="@+id/navigation_live_drawing"
+        android:icon="@drawable/ic_live_drawing"
+        android:title="@string/title_live_drawing" />
+
+    <item
+        android:id="@+id/navigation_challenges"
+        android:icon="@drawable/ic_challenges"
+        android:title="@string/title_challenges" />
+
+</menu>

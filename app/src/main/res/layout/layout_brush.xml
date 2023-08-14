@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/brushLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/customBrushes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintWidth="wrap_content"
+            android:backgroundTint="@color/light_black"
+            app:layout_constraintHorizontal_bias="0"
+            android:background="@drawable/ic_rectangular_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <HorizontalScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/fountainPen"
+                        android:layout_width="50dp"
+                        android:layout_height="65dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/ic_pen"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/mild_black" />
+
+                    <ImageView
+                        android:id="@+id/waterColorBrush"
+                        android:layout_width="50dp"
+                        android:layout_height="65dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/ic_water_brush"
+                        app:tint="@color/mild_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/fountainPen"
+                        app:layout_constraintEnd_toStartOf="@id/pencil"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <ImageView
+                        android:id="@+id/pencil"
+                        android:layout_width="50dp"
+                        android:layout_height="65dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/ic_pencil"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/waterColorBrush"
+                        app:layout_constraintEnd_toStartOf="@id/airBrush"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/mild_black" />
+
+                    <ImageView
+                        android:id="@+id/airBrush"
+                        android:layout_width="50dp"
+                        android:layout_height="65dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginStart="15dp"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_water_brush"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/pencil"
+                        app:layout_constraintEnd_toStartOf="@id/markerPen"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/mild_black" />
+
+                    <ImageView
+                        android:id="@+id/markerPen"
+                        android:layout_width="50dp"
+                        android:layout_height="65dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/ic_marker"
+                        android:visibility="gone"
+                        app:tint="@color/mild_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/airBrush"
+                        app:layout_constraintEnd_toStartOf="@id/crayon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/crayon"
+                        android:layout_width="50dp"
+                        android:layout_height="65dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/ic_crayon"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/markerPen"
+                        app:layout_constraintEnd_toStartOf="@id/calligraphyPen"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/mild_black" />
+
+
+
+                    <ImageView
+                        android:id="@+id/calligraphyPen"
+                        android:layout_width="50dp"
+                        android:layout_height="65dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginStart="15dp"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_calligraphy"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/crayon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/mild_black" />
+
+                    <ImageView
+                        android:id="@+id/moveOrForwardBrush"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/ic_arrow_forward"
+                        android:contentDescription="@string/forward"
+                        app:layout_constraintStart_toEndOf="@id/calligraphyPen"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:backgroundTint="@color/mild_black" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </HorizontalScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
